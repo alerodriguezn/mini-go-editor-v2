@@ -10,6 +10,7 @@ import { CompileButton } from "./CompileButton";
 import { testFiles } from "@/utils/test-files";
 import theme from "@/lib/monaco/themes/night-owl.json";
 import { useFilesStore } from "@/store/files-store";
+import config from "@/config/cdn";
 
 interface ErrorMarker {
   message: string;
@@ -25,6 +26,12 @@ type File = {
 interface Props {
   file: File;
 }
+
+loader.config({
+  paths: {
+    vs: '/monaco-editor/min/vs'
+  }
+});
 
 export const CustomEditor = ({ file }: Props) => {
   const [value, setValue] = useState(file.content || "");
