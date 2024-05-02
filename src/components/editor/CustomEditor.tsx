@@ -156,10 +156,7 @@ export const CustomEditor = ({ file }: Props) => {
         </div>
       </div>
       <div className="w-full flex justify-end items-center">
-        <h4 className="font-light text-sm mr-3">
-          **Archivos de Prueba, no hace falta darle a compilar, el parser se
-          ejecuta cuando cambia el código{" "}
-        </h4>
+        <h2>**El codigo se compila solo** </h2>
         <button
           className="bg-blue-600 hover:bg-blue-800 text-white py-2 px-4 rounded transition-all font-bold w-[15%] mr-2"
           onClick={() => handleTest(0)}
@@ -175,6 +172,18 @@ export const CustomEditor = ({ file }: Props) => {
         <button
           className="bg-red-600 hover:bg-red-800 text-white py-2 px-4 rounded transition-all font-bold w-[15%] mr-2"
           onClick={() => handleTest(2)}
+        >
+          Test Errors ❌
+        </button>
+        <button
+          className="bg-red-600 hover:bg-red-800 text-white py-2 px-4 rounded transition-all font-bold w-[15%] mr-2"
+          onClick={() => handleTest(3)}
+        >
+          Test Errors ❌
+        </button>
+        <button
+          className="bg-red-600 hover:bg-red-800 text-white py-2 px-4 rounded transition-all font-bold w-[15%] mr-2"
+          onClick={() => handleTest(4)}
         >
           Test Errors ❌
         </button>
